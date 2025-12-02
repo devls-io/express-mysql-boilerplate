@@ -36,7 +36,7 @@ Certifique-se de ter instalado:
 
  ## 2. Clonar e Instalar
 
-- **git clone [https://github.com/SEU-USUARIO/express-mysql-boilerplate.git](https://github.com/SEU-USUARIO/express-mysql-boilerplate.git)**
+- **git clone [https://github.com/devls-io/express-mysql-boilerplate.git](https://github.com/devls-io/express-mysql-boilerplate.git)**
 
 - **cd express-mysql-boilerplate**
 
