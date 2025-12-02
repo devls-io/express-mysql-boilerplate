@@ -23,61 +23,64 @@ A arquitetura foi desenhada seguindo princípios de **Separação de Responsabil
 │   ├── entities/        # Regras de Negócio e Validações (ex: User Class)
 │   ├── repositories/    # Camada de Persistência (SQL queries)
 │   ├── routes/          # Definição das rotas da API
-│   └── app.js           # (Opcional) Configurações do app
 └── server.js            # Ponto de entrada (Entry point)
 ```
 
 ## ⚙️ Como Executar
-1. Pré-requisitos
+## 1. Pré-requisitos
 Certifique-se de ter instalado:
 
 - **Node.js**
 - **MYSQL**
+<hr>
 
-2. Clonar e Instalar
+ ## 2. Clonar e Instalar
 
-git clone [https://github.com/SEU-USUARIO/express-mysql-boilerplate.git](https://github.com/SEU-USUARIO/express-mysql-boilerplate.git)
-cd express-mysql-boilerplate
-npm install
+- **git clone [https://github.com/SEU-USUARIO/express-mysql-boilerplate.git](https://github.com/SEU-USUARIO/express-mysql-boilerplate.git)**
 
-3. Configurar Variáveis de Ambiente
+- **cd express-mysql-boilerplate**
 
-Crie um arquivo .env na raiz do projeto (baseado no .env.example) e preencha com suas credenciais:
+- **npm install**
+<hr>
 
-PORT=4000
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=sua_senha
-DB_NAME=express_boilerplate_db
+## 3. Configurar Variáveis de Ambiente
 
+**Crie um arquivo .env na raiz do projeto (baseado no .env.example) e preencha com suas credenciais:**
 
-4. Configurar o Banco de Dados
+- PORT=4000
+- DB_HOST=localhost
+- DB_USER=root
+- DB_PASSWORD=sua_senha
+- DB_NAME=express_boilerplate_db
+
+<hr>
+
+## 4. Configurar o Banco de Dados
 
 Execute o script abaixo no seu cliente MySQL (DBeaver, Workbench) para criar a tabela:
 
+```sql
 CREATE DATABASE IF NOT EXISTS express_boilerplate_db;
 USE express_boilerplate_db;
 
-CREATE TABLE users(
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
-    email VARCHAR(100) NOT NULL UNIQUE,
-    password VARCHAR(100) NOT NULL,
-    created_at DATETIME DEFAULT CURRENT_TIMESTAMP() NOT NULL
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  email VARCHAR(100) NOT NULL UNIQUE,
+  password VARCHAR(100) NOT NULL,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP() NOT NULL
 );
-
-5. Rodar o Servidor
-
-# Modo de produção
-node server.js
-
-# Ou se tiver o script dev configurado
-npm run dev
+```
+<hr>
 
 
-# 📡 Endpoints da API
+## 5. Rodar o Servidor
+`node server.js`
 
-### 📡 Endpoints da API
+
+<hr>
+
+## 📡 Endpoints da API
 
 A API possui o prefixo `/api`.
 
